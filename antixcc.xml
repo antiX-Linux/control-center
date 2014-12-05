@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+  <antixcc icon="gnome-control-center" title="Centre de configuration antiX">
+   <category icon="wmtweaks" title="Bureau">
+    <tool action="nitrogen --sort=alpha --no-recurse ~/Wallpaper/" icon="background" label="Fond dEcran"/>
+    <tool action="geany ~/.fluxbox/overlay ~/.fluxbox/keys ~/.fluxbox/init ~/.fluxbox/startup ~/.fluxbox/apps ~/.fluxbox/menu" icon="wmtweaks" label="Réglages Fluxbox"/>
+    <tool action="tidesktool" icon="video-display" label="Icônes du Bureau idesk"/>
+    <tool action="lxappearance" icon="preferences-desktop-theme" label="Gestionnaire de Thèmes gtk2"/>
+    <tool action="geany ~/.icewm/winoptions ~/.icewm/preferences ~/.icewm/keys ~/.icewm/startup ~/.icewm/toolbar ~/.icewm/menu" icon="wmtweaks" label="Réglages Icewm"/>
+    <tool action="antixcc-cursor-theme.sh" icon="mouse" label="Thème de Curseur"/>
+   </category>
+   <category icon="preferences-system" title="Outils Système">
+    <tool action="gksu synaptic" icon="system-installer" label="Gestionnaire de Paquets"/>
+    <tool action="gksu msystem" icon="preferences-system" label="Configuration du Système"/>
+    <tool action="roxterm -e su -c sysv-rc-conf" icon="services" label="Gestionnaire de Services"/>
+    <tool action="gksu muser" icon="config-users" label="Gestion des Utilisateurs"/>
+    <tool action="gksu &quot;geany  /etc/fstab /etc/X11/xorg.conf /boot/grub/menu.lst /etc/slim.conf /etc/apt/apt.conf /etc/apt/sources.list&quot;" icon="gnome-applications" label="Fichiers de Configuration"/>
+    <tool action="geany ~/.fluxbox/conkyrc ~/.icewm/conkyrc" icon="gnome-monitor" label="Préférences Conky"/>
+   </category>
+   <category icon="network-wired" title="Réseau">
+    <tool action="roxterm -e ceniwrapper" icon="connect_creating" label="Interfaces Réseau (ceni)"/>
+    <tool action="roxterm -e su -c pppoeconf" icon="network-wired" label="Configuration ADSL"/>
+    <tool action="wicd-client -n" icon="wicd_32x32" label="Réseau sans Fil (wicd)"/>
+    <tool action="gksu rutilt" icon="network-wireless" label="Réseau sans Fil (rutilt)"/>
+    <tool action="gnome-ppp" icon="network-wired" label="Connexion par Modem RTC"/>
+    <tool action="antixccfirewall.sh" icon="firewall" label="Gestion du Pare-Feu"/>
+   </category>
+   <category icon="gdm" title="X Window">
+    <tool action="antixcckeyboard.sh" icon="preferences-desktop-keyboard" label="Disposition du Clavier"/>
+    <tool action="gksu antixccslim.sh" icon="gdm" label="Ecran dAccueil Slim"/>
+    <tool action="antixccmouse.sh" icon="mouse" label="Configuration de la Souris"/>
+    <tool action="leafpad ~/.xinitrc" icon="xfce4-splash" label="Options de Login"/>
+    <tool action="gksu slim-login" icon="gdm" label="Configuration auto-login"/>
+   </category>
+   <category icon="drive-harddisk" title="Disques">
+    <tool action="gksu gparted" icon="drive-harddisk" label="Outil de Partitionnement"/>
+    <tool action="gksu mountbox" icon="drive-removable-media" label="Montage des Périphériques"/>
+    <tool action="gksu luckybackup" icon="file-roller" label="Sauvegarde du Système"/>
+    <tool action="roxterm -e su -c partimage" icon="document-save" label="Copier une Partition"/>
+    <tool action="grsync" icon="system-software-update" label="Synchronisation de Répertoires"/>
+    <tool action="gksu antix2usb-gui.py" icon="accessories-archiver" label="antiX2usb"/>
+   </category>
+   <category icon="computer" title="Matériel">
+    <tool action="hardinfo" icon="computer" label="Gestionnaire de Matériel"/>
+    <tool action="system-config-printer" icon="stock_print-setup" label="Imprimantes"/>
+    <tool action="roxterm -e su -c alsaconf" icon="gnome-settings-sound" label="Configuration Audio"/>
+    <tool action="gksu grandr" icon="display-capplet" label="Taille de Lécran"/>
+    <tool action="roxterm -e su -c &quot;dpkg-reconfigure tzdata&quot;" icon="config-date" label="Date et Heure"/>
+    <tool action="roxterm -e alsamixer" icon="audio-volume-high" label="Contrôle du Volume Audio"/>
+   </category>
+  </antixcc>
